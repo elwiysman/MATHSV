@@ -1,9 +1,9 @@
 from flask import Flask, request, jsonify, Response
 from flask_cors import CORS
-from utils.validate import validate_input
-from utils.steps import create_latex_steps
-from utils.solve import solve_math
-from utils.graph import generate_graph
+from .utils.validate import validate_input
+from .utils.steps import create_latex_steps
+from .utils.solve import solve_math
+from .utils.graph import generate_graph
 import sympy as sp
 import matplotlib   
 matplotlib.use('Agg')
