@@ -8,9 +8,17 @@ import sympy as sp
 import matplotlib   
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
+import os
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "*"}})
+CORS(app, resources={
+    r"/*": {
+        "origins": [
+            "https://elwiysman.github.io/MATHSV/",  
+            "*"
+        ]
+    }
+})
 
 @app.route('/calculate', methods=['POST'])
 def calculate_route():
